@@ -14,7 +14,7 @@ class Transfer
   end
   
   def execute_transaction
-    if 
+    if valid? && 
   end
   
   def reverse_transaction
