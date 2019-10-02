@@ -14,7 +14,7 @@ class Transfer
   end
   
   def execute_transaction
-    if valid? && sender.balance > amount && status == "pending"
+    if valid? && sender.balance > amount && self.status == "pending"
       sender.withdrawal(self.amount)
       receiver.deposit(self.amount)
       status = "complete"
@@ -25,7 +25,7 @@ class Transfer
   end
   
   def reverse_transaction
-    if valid? && receiver.balance > amount && status == "complete"
+    if valid? && receiver.balance > amount && self.status == "complete"
       sender.deposit(self.amount)
       receiver.withdrawal(self.amount)
       status = "reversed"
