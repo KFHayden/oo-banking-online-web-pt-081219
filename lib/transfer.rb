@@ -29,7 +29,8 @@ class Transfer
       sender.deposit(self.amount)
       receiver.withdrawal(self.amount)
       status = "reversed"
-    end
+    else
+      
   end
   
 end
