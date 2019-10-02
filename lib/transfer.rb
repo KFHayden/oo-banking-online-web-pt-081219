@@ -19,7 +19,7 @@ class Transfer
       receiver.deposit(self.amount)
       self.status = "complete"
     else
-      
+      self.status
   end
   
   def reverse_transaction
