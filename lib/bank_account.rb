@@ -22,7 +22,7 @@ class BankAccount
   end
   
   def valid?
-    
+    self.status == "open"
   end
   
   def close_account
