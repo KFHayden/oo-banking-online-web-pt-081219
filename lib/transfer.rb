@@ -1,5 +1,5 @@
 class Transfer
   
-  attr_accessor :
+  attr_accessor :sender, :receiver, :amount, 
   
 end
