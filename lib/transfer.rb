@@ -30,6 +30,7 @@ class Transfer
       receiver.withdrawal(self.amount)
       status = "reversed"
     else
+      status = "rejected"
       
   end
   
