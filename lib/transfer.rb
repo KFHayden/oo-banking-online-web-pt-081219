@@ -15,23 +15,24 @@ class Transfer
   
   def execute_transaction
     if valid? && sender.balance > amount && status == "pending"
-      sender.withdrawal(self.amount)
-      receiver.deposit(self.amount)
-      self.status = "complete"
+      sender.withdrawal(amount)
+      receiver.deposit(amount)
+      status = "complete"
     else
-      self.status = "rejected"
+      status = "rejected"
       "Transaction rejected. Please check your account balance."
     end
   end
   
   def reverse_transaction
     if valid? && receiver.balance > amount && status == "complete"
-      sender.deposit(self.amount)
-      receiver.withdrawal(self.amount)
+      sender.deposit(amount)
+      receiver.withdrawal(amount)
       status = "reversed"
     else
       status = "rejected"
-      
+      "Transaction rejected. Please check your account balance."
+    end
   end
   
 end
