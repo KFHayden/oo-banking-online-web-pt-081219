@@ -15,7 +15,7 @@ class Transfer
   
   def execute_transaction
     if valid? && sender.balance > amount && status == "pending"
-      
+      sender.withdrawal
   end
   
   def reverse_transaction
