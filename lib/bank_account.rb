@@ -10,7 +10,7 @@ class BankAccount
   end
   
   def deposit(amount)
-    @balance << self.deposit(amount)
+    self.balance += amount
   end
   
   def withdrawal(amount)
