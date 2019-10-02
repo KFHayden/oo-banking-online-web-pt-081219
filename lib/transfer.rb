@@ -28,7 +28,8 @@ class Transfer
     if valid? && receiver.balance > amount && status == "complete"
       sender.deposit(self.amount)
       receiver.withdrawal(self.amount)
-      
+      status = "reversed"
+    end
   end
   
 end
