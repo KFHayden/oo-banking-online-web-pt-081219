@@ -24,6 +24,7 @@ class BankAccount
   def valid?
   end
   
-  
+  def close_account
+  end
 
 end
