@@ -12,5 +12,8 @@ class BankAccount
   def deposit(amount)
     @balance << self.deposit(amount)
   end
+  
+  def withdrawal(amount)
+    
 
 end
